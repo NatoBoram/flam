@@ -1,0 +1,45 @@
+{
+	"name": "@natoboram/flam",
+	"version": "0.0.1",
+	"description": "Fierce LAMF Asking Machine is intended to be a bot that requests explanatory comments under posts in r/LeopardsAteMyFace.",
+	"keywords": [
+		"Reddit",
+		"r/LeopardsAteMyFace"
+	],
+	"homepage": "https://github.com/NatoBoram/flam",
+	"bugs": {
+		"url": "https://github.com/NatoBoram/flam/issues"
+	},
+	"license": "AGPL-3.0-or-later",
+	"author": {
+		"name": "Nato Boram",
+		"url": "https://github.com/NatoBoram"
+	},
+	"funding": [
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/NatoBoram"
+		},
+		{
+			"type": "individual",
+			"url": "https://paypal.me/NatoBoram/5"
+		}
+	],
+	"repository": "github:NatoBoram/flam",
+	"scripts": {
+		"start": "tsx ./src/index.ts",
+		"tsc": "tsc",
+		"format": "prettier -w ."
+	},
+	"devDependencies": {
+		"@types/node": "^18.14.0",
+		"@typescript-eslint/eslint-plugin": "^5.52.0",
+		"@typescript-eslint/parser": "^5.52.0",
+		"dotenv": "^16.0.3",
+		"eslint": "^8.34.0",
+		"prettier": "^2.8.4",
+		"tsx": "^3.12.3",
+		"typescript": "^4.9.5"
+	},
+	"type": "module"
+}

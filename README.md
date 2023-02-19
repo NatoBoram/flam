@@ -1,14 +1,14 @@
 # FLAM
 
-*Fierce LAMF Asking Machine* is intended to be a bot that requests explanatory comments under posts in [r/LeopardsAteMyFace](https://www.reddit.com/r/LeopardsAteMyFace).
+_Fierce LAMF Asking Machine_ is intended to be a bot that requests explanatory comments under posts in [r/LeopardsAteMyFace](https://www.reddit.com/r/LeopardsAteMyFace).
 
 It's not started yet.
 
 ## Theme
 
-The "*leopards ate my face*" theme is embodied by this quote from the sidebar.
+The "_leopards ate my face_" theme is embodied by this quote from the sidebar.
 
-> "*I never thought leopards would eat **my** face*", sobs woman who voted for the *Leopards Eating People's Faces Party*. Revel in the schadenfreude anytime someone has a sad because they're suffering consequences from something they voted for, supported or wanted to impose on other people.
+> "_I never thought leopards would eat **my** face_", sobs woman who voted for the _Leopards Eating People's Faces Party_. Revel in the schadenfreude anytime someone has a sad because they're suffering consequences from something they voted for, supported or wanted to impose on other people.
 
 ```mermaid
 flowchart

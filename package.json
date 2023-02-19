@@ -28,8 +28,9 @@
 	"repository": "github:NatoBoram/flam",
 	"scripts": {
 		"start": "tsx ./src/index.ts",
-		"tsc": "tsc",
-		"format": "prettier -w ."
+		"build": "tsc",
+		"format": "prettier --plugin-search-dir . --write .",
+		"lint": "prettier --plugin-search-dir . --check . && eslint ."
 	},
 	"devDependencies": {
 		"@types/node": "^18.14.0",
@@ -37,6 +38,7 @@
 		"@typescript-eslint/parser": "^5.52.0",
 		"dotenv": "^16.0.3",
 		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
 		"prettier": "^2.8.4",
 		"tsx": "^3.12.3",
 		"typescript": "^4.9.5"

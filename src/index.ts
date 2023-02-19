@@ -31,3 +31,5 @@ const client = await Client.newClient(
 )
 
 console.log(`Started ${userAgent}!`)
+
+await client.revoke()

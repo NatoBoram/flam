@@ -32,4 +32,59 @@ const client = await Client.newClient(
 
 console.log(`Started ${userAgent}!`)
 
+// Get private messages
+const requestInbox = await client.privatemessage.inbox()
+if (!requestInbox.ok)
+	throw new Error(`Couldn't get private messages: ${await requestInbox.text()}`)
+
+const privateMessages = await requestInbox.json()
+for (const message of privateMessages.data.children) {
+	if (
+		message.data.distinguished &&
+		message.data.subreddit &&
+		message.data.subject ===
+			`invitation to moderate /r/${message.data.subreddit}`
+	) {
+		console.log("Received invitation:", message.data)
+
+		// Accept moderator invites
+		const requestAccept = await client.modself.accept(
+			message.data.subreddit,
+			privateMessages.data.modhash ?? undefined,
+		)
+		if (!requestAccept.ok) {
+			console.error(
+				`Couldn't accept moderator invitation: ${await requestAccept.text()}`,
+			)
+			continue
+		}
+	}
+
+	// Delete read message
+	const deleteRequest = await client.privatemessage.delete(
+		message.data.name,
+		privateMessages.data.modhash ?? undefined,
+	)
+	if (!deleteRequest.ok) {
+		console.error(`Couldn't delete message: ${await deleteRequest.text()}`)
+		continue
+	}
+}
+
+// Get moderating subreddits
+
+// Get their wiki `/config/.flam.yaml`
+
+// Check for new message input, delay
+
+// Check one page of new posts
+
+// Filter with local storage
+
+// In untouched posts, post a comment, save it in localstorage as post_id: {post, message}
+
+// Wait for 1h
+
+// Go to "Get moderating subreddits"
+
 await client.revoke()

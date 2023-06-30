@@ -1,5 +1,5 @@
-import { Client } from "./client.js"
-import { Kind } from "./kind.js"
+import { Client } from "../client.js"
+import { Kind } from "../types/kind.js"
 
 export class SubscribeController {
 	private readonly baseUrl = "https://oauth.reddit.com"

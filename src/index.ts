@@ -45,7 +45,7 @@ for (const message of privateMessages.data.children) {
 		message.data.subject ===
 			`invitation to moderate /r/${message.data.subreddit}`
 	) {
-		console.log("Received invitation:", message.data)
+		console.log("Received invitation:", message.data.subject)
 
 		// Accept moderator invites
 		const requestAccept = await client.modself.accept(
@@ -72,16 +72,22 @@ for (const message of privateMessages.data.children) {
 }
 
 // Get moderating subreddits
+const requestModerating = await client.mysubreddits.moderator()
+if (!requestModerating.ok)
+	throw new Error(
+		`Couldn't get moderating subreddits: ${await requestModerating.text()}`,
+	)
 
-// Get their wiki `/config/.flam.yaml`
+const moderating = await requestModerating.json()
 
-// Check for new message input, delay
-
-// Check one page of new posts
-
-// Filter with local storage
-
-// In untouched posts, post a comment, save it in localstorage as post_id: {post, message}
+for (const subreddit of moderating.data.children) {
+	console.log("Moderating:", subreddit.data.display_name_prefixed)
+	// Get their wiki `/config/.flam.yaml`
+	// Check for new message input, delay
+	// Check one page of new posts
+	// Filter with local storage
+	// In untouched posts, post a comment, save it in localstorage as post_id: {post, message}
+}
 
 // Wait for 1h
 

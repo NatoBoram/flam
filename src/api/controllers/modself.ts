@@ -1,5 +1,5 @@
-import { Client } from "./client.js"
-import { Fullname } from "./fullname.js"
+import { Client } from "../client.js"
+import { Fullname } from "../types/fullname.js"
 
 /** Make changes to your subreddit moderator and contributor status
  *

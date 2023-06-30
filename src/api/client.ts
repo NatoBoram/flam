@@ -1,13 +1,15 @@
-import { AccessToken } from "./access_token.js"
-import { GrantType } from "./grant_type.js"
-import { ModselfController } from "./modself.js"
-import { PrivateMessagesController } from "./privatemessages.js"
-import { SubscribeController } from "./subscribe.js"
+import { AccessToken } from "./types/access_token.js"
+import { ModselfController } from "./controllers/modself.js"
+import { MysubredditsController } from "./controllers/mysubreddits.js"
+import { PrivateMessagesController } from "./controllers/privatemessages.js"
+import { SubscribeController } from "./controllers/subscribe.js"
+import { GrantType } from "./types/grant_type.js"
 
 export class Client {
 	private revoked = false
 
 	readonly modself = new ModselfController(this)
+	readonly mysubreddits = new MysubredditsController(this)
 	readonly privatemessage = new PrivateMessagesController(this)
 	readonly subscribe = new SubscribeController(this)
 

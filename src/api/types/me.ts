@@ -16,7 +16,7 @@ export interface MeData {
 	readonly has_external_account: boolean
 	readonly pref_geopopular: string
 	readonly pref_show_trending: boolean
-	readonly subreddit: Subreddit
+	readonly subreddit: MeSubreddit
 	readonly pref_show_presence: boolean
 	readonly has_ios_subscription: boolean
 	readonly snoovatar_size: null
@@ -114,7 +114,7 @@ export interface Mweb {
 	readonly experiment_id: number
 }
 
-export interface Subreddit {
+export interface MeSubreddit {
 	readonly default_set: boolean
 	readonly banner_img: string
 	readonly allowed_media_in_comments: unknown[]

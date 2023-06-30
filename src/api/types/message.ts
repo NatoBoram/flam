@@ -5,6 +5,7 @@ import { Listing } from "./listing.js"
 import { Thing } from "./thing.js"
 
 export type Messages = Listing<MessageData>
+
 export interface Message extends Thing<MessageData> {
 	readonly kind: Kind.message
 	readonly data: MessageData

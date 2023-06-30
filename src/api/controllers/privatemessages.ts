@@ -1,7 +1,7 @@
-import { Client } from "./client.js"
-import { Fullname } from "./fullname.js"
-import { Kind } from "./kind.js"
-import { Messages } from "./message.js"
+import { Client } from "../client.js"
+import { Fullname } from "../types/fullname.js"
+import { Kind } from "../types/kind.js"
+import { Messages } from "../types/message.js"
 
 /** Access my inbox and send private messages to other users. */
 export class PrivateMessagesController {
